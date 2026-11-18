@@ -1,0 +1,16 @@
+# Data terms: never commit data, derived data or trained models
+data/*
+!data/.gitkeep
+*.zip
+*.gz
+*.csv
+*.parquet
+*.pkl
+*.joblib
+# Environment
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+# Personal notes (interview prep, not for the public repo)
+DECISIONS.md
