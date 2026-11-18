@@ -12,5 +12,4 @@ data/*
 __pycache__/
 .ipynb_checkpoints/
 .DS_Store
-# Personal notes (interview prep, not for the public repo)
 DECISIONS.md
