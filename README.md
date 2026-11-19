@@ -2,6 +2,8 @@
 
 **Question:** When a bank approves a mortgage, how likely is the borrower to fall 90+ days behind (or cause a loss) within two years? This is the loan's **probability of default (PD)**, which banks use to approve, price and hold capital against loans.
 
+**Tools:** Python · pandas · NumPy · scikit-learn · SciPy · Matplotlib &nbsp;|&nbsp; **Data:** Freddie Mac Single-Family Loan-Level Dataset (published as aggregates only)
+
 ## At a glance
 
 - **Data:** about 315,000 Freddie Mac mortgages made in 2010–2017, plus about 198,000 from 2018–2019 and 2022–2023 for stress tests.
@@ -10,6 +12,8 @@
 - **Business decision:** catching most bad loans costs dozens of good borrowers each, so declines should be rare. The analysis supports approving most applicants, reviewing or pricing up the middle, and declining only above a breakeven PD of about 2–9%.
 - **Stress test:** the model's ranking holds up as rates rose (2022–2023) but weakens under COVID, which no application data could foresee.
 - **Validity:** a leakage audit confirms the model uses only information available at approval, and quantifies how much the calibration relies on recent outcomes.
+
+![Stress test: predicted vs actual default rates and AUC by year](images/stress_test.png)
 
 ## Repository contents
 
@@ -74,7 +78,6 @@ The frozen model (nothing refit) scored on loans whose first two years hit a sho
 
 ![Default rates](images/eda_default_rates.png)
 ![ROC and calibration](images/roc_and_calibration.png)
-![Stress test](images/stress_test.png)
 ![Feature importance](images/feature_importance.png)
 ![Partial dependence](images/partial_dependence.png)
 
